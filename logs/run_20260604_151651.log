@@ -1,0 +1,13 @@
+2026-06-04 15:17:00,283 | INFO | Loaded task: go to https://sevenaiinstitute.com/admin/login.php , login with this details admin , admin123 and add a new testinomial with random informatiom
+2026-06-04 15:17:00,284 | INFO | Resolved start URL: https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:17:00,284 | INFO | Writing run log to: logs\run_20260604_151651.log
+2026-06-04 15:17:00,578 | INFO | Launching Chromium browser
+2026-06-04 15:17:00,996 | INFO | Navigating to start URL
+2026-06-04 15:17:02,737 | INFO | Starting pre-session popup handling
+2026-06-04 15:17:03,795 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:17:03,817 | INFO | Auth wall detected; attempting login fallback using task credentials
+2026-06-04 15:17:04,968 | INFO | Login fallback submitted; waiting for authenticated page state
+2026-06-04 15:17:05,990 | INFO | Starting step 2 on URL https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:17:06,011 | WARNING | Session blocked: Authentication URL detected: https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:17:06,114 | INFO | Run finished; final screenshot saved
+2026-06-04 15:17:06,114 | INFO | Closing browser

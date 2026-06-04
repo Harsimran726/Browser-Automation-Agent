@@ -1,0 +1,22 @@
+2026-06-04 13:57:49,875 | INFO | Loaded task: go to sevenaiinstitute.com , find the ai development course, and goes to the contact, fill the information that needed of user, harsimran singh, 7814523434, harisrms@gmail.com, and rest you handle
+2026-06-04 13:57:49,876 | INFO | Resolved start URL: https://sevenaiinstitute.com
+2026-06-04 13:57:49,876 | INFO | Writing run log to: logs\run_20260604_135748.log
+2026-06-04 13:57:50,181 | INFO | Launching Chromium browser
+2026-06-04 13:57:50,611 | INFO | Navigating to start URL
+2026-06-04 13:57:53,241 | INFO | Starting pre-session popup handling
+2026-06-04 13:57:56,284 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 13:57:56,293 | INFO | Popup classifier raw response: {
+	"category": "contact_support",
+	"reason": "The popup invites users to inquire about AI courses, indicating a need for communication and support.",
+	"confidence": 0.9
+}
+2026-06-04 13:57:57,309 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/
+2026-06-04 13:57:59,082 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 13:57:59,083 | INFO | Popup classifier raw response: {
+	"category": "contact_support",
+	"reason": "The popup invites users to inquire about AI courses, indicating a need for communication and support.",
+	"confidence": 0.9
+}
+2026-06-04 13:57:59,083 | WARNING | Blocking popup detected: The popup invites users to inquire about AI courses, indicating a need for communication and support.
+2026-06-04 13:57:59,437 | INFO | Run finished; final screenshot saved
+2026-06-04 13:57:59,437 | INFO | Closing browser

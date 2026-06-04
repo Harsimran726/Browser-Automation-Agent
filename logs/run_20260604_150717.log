@@ -1,0 +1,10 @@
+2026-06-04 15:07:21,782 | INFO | Loaded task: go to https://sevenaiinstitute.com/admin/login.php , login with this details admin , admin123 and add a new testinomial with random informatiom
+2026-06-04 15:07:21,783 | INFO | Resolved start URL: https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:07:21,783 | INFO | Writing run log to: logs\run_20260604_150717.log
+2026-06-04 15:07:22,081 | INFO | Launching Chromium browser
+2026-06-04 15:07:22,537 | INFO | Navigating to start URL
+2026-06-04 15:07:24,253 | INFO | Starting pre-session popup handling
+2026-06-04 15:07:25,303 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:07:25,320 | WARNING | Session blocked: Authentication URL detected: https://sevenaiinstitute.com/admin/login.php
+2026-06-04 15:07:25,413 | INFO | Run finished; final screenshot saved
+2026-06-04 15:07:25,413 | INFO | Closing browser

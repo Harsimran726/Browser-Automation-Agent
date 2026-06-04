@@ -1,0 +1,7 @@
+2026-06-04 12:24:37,084 | INFO | Loaded task: # print(f"----STARTING PRE-SESSION POPUP CHECKS AND DISMISSALS")
+2026-06-04 12:24:37,085 | INFO | Resolved start URL: about:blank
+2026-06-04 12:24:37,086 | INFO | Writing run log to: logs\run_20260604_122431.log
+2026-06-04 12:24:37,846 | INFO | Launching Chromium browser
+2026-06-04 12:24:38,696 | INFO | Navigating to start URL
+2026-06-04 12:24:40,672 | INFO | Starting pre-session popup handling
+2026-06-04 12:24:41,905 | INFO | Starting step 1 on URL about:blank

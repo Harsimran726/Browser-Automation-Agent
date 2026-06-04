@@ -1,0 +1,8 @@
+2026-06-04 14:27:37,104 | INFO | Loaded task: go to https://books.toscrape.com/ , find the finace book at least 5 and add to basket but keep in mind the book price should b range between 30 to 50 euro or dollar.
+2026-06-04 14:27:37,104 | INFO | Resolved start URL: https://books.toscrape.com/
+2026-06-04 14:27:37,104 | INFO | Writing run log to: logs\run_20260604_142729.log
+2026-06-04 14:27:37,414 | INFO | Launching Chromium browser
+2026-06-04 14:27:37,859 | INFO | Navigating to start URL
+2026-06-04 14:27:41,827 | INFO | Starting pre-session popup handling
+2026-06-04 14:27:42,875 | INFO | Starting step 1 on URL https://books.toscrape.com/
+2026-06-04 14:27:44,991 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"

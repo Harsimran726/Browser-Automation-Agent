@@ -1,0 +1,78 @@
+2026-06-04 14:11:30,317 | INFO | Loaded task: go to sevenaiinstitute.com , find the ai development releated courses first, choose the intermediate level, and then goes their contact support , fill the contact form details harsimran , harsimran@gmail.com , 324233243, and rest of them
+2026-06-04 14:11:30,317 | INFO | Resolved start URL: https://sevenaiinstitute.com
+2026-06-04 14:11:30,317 | INFO | Writing run log to: logs\run_20260604_141127.log
+2026-06-04 14:11:30,622 | INFO | Launching Chromium browser
+2026-06-04 14:11:31,103 | INFO | Navigating to start URL
+2026-06-04 14:11:33,890 | INFO | Starting pre-session popup handling
+2026-06-04 14:11:36,101 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:11:36,108 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about AI courses, which is not necessary for the user task of finding and enrolling in courses directly on the website.",
+	"confidence": 0.9
+}
+2026-06-04 14:11:39,024 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/
+2026-06-04 14:11:41,020 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:11:41,022 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about AI courses, which is not necessary for the user task of finding and enrolling in courses directly on the website.",
+	"confidence": 0.9
+}
+2026-06-04 14:11:47,544 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:11:47,545 | INFO | Model raw response: {
+  "action": "navigate",
+  "target": "https://sevenaiinstitute.com/",
+  "text": "",
+  "reasoning": "Navigating to the specified URL to start the task.",
+  "task_complete": false
+}
+2026-06-04 14:11:47,546 | INFO | Step 1 decision: navigate -> https://sevenaiinstitute.com/
+2026-06-04 14:11:47,546 | INFO | Step 1 reasoning: Navigating to the specified URL to start the task.
+2026-06-04 14:11:47,567 | INFO | Executing action at step 1: navigate
+2026-06-04 14:11:50,660 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:11:50,667 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about AI courses, which is not necessary for the user task of finding and enrolling in courses directly on the website.",
+	"confidence": 0.9
+}
+2026-06-04 14:11:54,048 | INFO | Starting step 2 on URL https://sevenaiinstitute.com/
+2026-06-04 14:11:55,995 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:11:55,996 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about AI courses, which is not necessary for the user task of finding and enrolling in courses directly on the website.",
+	"confidence": 0.9
+}
+2026-06-04 14:12:01,927 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:12:01,928 | INFO | Model raw response: {
+  "action": "click",
+  "target": "COURSES",
+  "text": "",
+  "reasoning": "Navigating to the courses section to find AI development related courses.",
+  "task_complete": false
+}
+2026-06-04 14:12:01,928 | INFO | Step 2 decision: click -> COURSES
+2026-06-04 14:12:01,928 | INFO | Step 2 reasoning: Navigating to the courses section to find AI development related courses.
+2026-06-04 14:12:01,949 | INFO | Executing action at step 2: click
+2026-06-04 14:12:07,988 | INFO | Starting step 3 on URL https://sevenaiinstitute.com/courses.php
+2026-06-04 14:12:11,668 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:12:11,669 | INFO | Model raw response: {
+  "action": "scroll",
+  "target": "AI Development Courses",
+  "text": "",
+  "reasoning": "Need to reveal more content to find AI development related courses.",
+  "task_complete": false
+}
+2026-06-04 14:12:11,670 | INFO | Step 3 decision: scroll -> AI Development Courses
+2026-06-04 14:12:11,670 | INFO | Step 3 reasoning: Need to reveal more content to find AI development related courses.
+2026-06-04 14:12:11,677 | INFO | Executing action at step 3: scroll
+2026-06-04 14:12:13,698 | INFO | Starting step 4 on URL https://sevenaiinstitute.com/courses.php
+2026-06-04 14:12:18,155 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:12:18,156 | INFO | Model raw response: {
+  "action": "click",
+  "target": "AI Development Courses",
+  "text": "",
+  "reasoning": "Selecting the AI Development Courses to find the intermediate level options.",
+  "task_complete": false
+}
+2026-06-04 14:12:18,156 | INFO | Step 4 decision: click -> AI Development Courses
+2026-06-04 14:12:18,156 | INFO | Step 4 reasoning: Selecting the AI Development Courses to find the intermediate level options.
+2026-06-04 14:12:18,164 | INFO | Executing action at step 4: click

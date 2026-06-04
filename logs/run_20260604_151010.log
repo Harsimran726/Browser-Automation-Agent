@@ -1,0 +1,6 @@
+2026-06-04 15:10:12,440 | INFO | Loaded task: go to https://sevenaiinstitute.com/index.php , click on contact us button of navbar , fill the contact form by scroll, fill the random details and submit the form
+2026-06-04 15:10:12,440 | INFO | Resolved start URL: https://sevenaiinstitute.com/index.php
+2026-06-04 15:10:12,440 | INFO | Writing run log to: logs\run_20260604_151010.log
+2026-06-04 15:10:12,748 | INFO | Launching Chromium browser
+2026-06-04 15:10:13,240 | INFO | Navigating to start URL
+2026-06-04 15:10:15,925 | INFO | Starting pre-session popup handling

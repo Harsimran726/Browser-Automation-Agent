@@ -1,0 +1,10 @@
+2026-06-04 12:25:35,113 | INFO | Loaded task: go to https://www.amazon.in/ , find the iphone 16 pro black color with 256 gb and add into the cart list of amazon
+2026-06-04 12:25:35,114 | INFO | Resolved start URL: https://www.amazon.in/
+2026-06-04 12:25:35,114 | INFO | Writing run log to: logs\run_20260604_122449.log
+2026-06-04 12:25:35,955 | INFO | Launching Chromium browser
+2026-06-04 12:25:36,971 | INFO | Navigating to start URL
+2026-06-04 12:26:03,726 | INFO | Starting pre-session popup handling
+2026-06-04 12:26:36,854 | INFO | Starting step 1 on URL https://www.amazon.in/
+2026-06-04 12:26:36,882 | WARNING | Confirmation popup detected: Confirmation dialog detected
+2026-06-04 12:26:41,397 | INFO | Run finished; final screenshot saved
+2026-06-04 12:26:41,398 | INFO | Closing browser

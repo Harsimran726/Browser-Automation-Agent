@@ -1,0 +1,22 @@
+2026-06-04 13:56:14,377 | INFO | Loaded task: go to sevenaiinstitute.com , find the ai development course, and goes to the contact, fill the information that needed of user, harsimran singh, 7814523434, harisrms@gmail.com, and rest you handle
+2026-06-04 13:56:14,377 | INFO | Resolved start URL: https://sevenaiinstitute.com
+2026-06-04 13:56:14,377 | INFO | Writing run log to: logs\run_20260604_135606.log
+2026-06-04 13:56:14,669 | INFO | Launching Chromium browser
+2026-06-04 13:56:15,240 | INFO | Navigating to start URL
+2026-06-04 13:56:17,881 | INFO | Starting pre-session popup handling
+2026-06-04 13:56:20,768 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 13:56:20,777 | INFO | Popup classifier raw response: {
+	"category": "unknown",
+	"reason": "The popup is about inquiring information on AI courses and does not fit into the specified categories.",
+	"confidence": 0.8
+}
+2026-06-04 13:56:21,792 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/
+2026-06-04 13:56:23,352 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 13:56:23,353 | INFO | Popup classifier raw response: {
+	"category": "unknown",
+	"reason": "The popup is an inquiry about enrolling in AI courses, which does not fit the specified categories.",
+	"confidence": 0.8
+}
+2026-06-04 13:56:23,353 | WARNING | Blocking popup detected: The popup is an inquiry about enrolling in AI courses, which does not fit the specified categories.
+2026-06-04 13:56:26,445 | INFO | Run finished; final screenshot saved
+2026-06-04 13:56:26,446 | INFO | Closing browser

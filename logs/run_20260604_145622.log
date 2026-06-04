@@ -1,0 +1,128 @@
+2026-06-04 14:56:55,178 | INFO | Loaded task: go to https://sevenaiinstitute.com/index.php , click on contact us button of navbar , fill the contact form by scroll, fill the random details and submit the form
+2026-06-04 14:56:55,178 | INFO | Resolved start URL: https://sevenaiinstitute.com/index.php
+2026-06-04 14:56:55,179 | INFO | Writing run log to: logs\run_20260604_145622.log
+2026-06-04 14:56:55,465 | INFO | Launching Chromium browser
+2026-06-04 14:56:55,854 | INFO | Navigating to start URL
+2026-06-04 14:56:58,630 | INFO | Starting pre-session popup handling
+2026-06-04 14:57:00,684 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:00,689 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 14:57:03,680 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/index.php
+2026-06-04 14:57:05,561 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:05,561 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for the user task of filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 14:57:12,074 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:12,075 | INFO | Model raw response: {
+  "action": "click",
+  "target": "CONTACT US",
+  "text": "",
+  "reasoning": "Navigating to the contact us page to fill the form.",
+  "task_complete": false
+}
+2026-06-04 14:57:12,075 | INFO | Step 1 decision: click -> CONTACT US
+2026-06-04 14:57:12,075 | INFO | Step 1 reasoning: Navigating to the contact us page to fill the form.
+2026-06-04 14:57:12,096 | INFO | Executing action at step 1: click
+2026-06-04 14:57:18,208 | INFO | Starting step 2 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:57:22,281 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:22,282 | INFO | Model raw response: {
+  "action": "scroll",
+  "target": "contact form",
+  "text": "",
+  "reasoning": "Scrolling is needed to reveal the contact form for filling out details.",
+  "task_complete": false
+}
+2026-06-04 14:57:22,283 | INFO | Step 2 decision: scroll -> contact form
+2026-06-04 14:57:22,283 | INFO | Step 2 reasoning: Scrolling is needed to reveal the contact form for filling out details.
+2026-06-04 14:57:22,290 | INFO | Executing action at step 2: scroll
+2026-06-04 14:57:24,310 | INFO | Starting step 3 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:57:29,645 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:29,646 | INFO | Model raw response: {
+  "action": "type",
+  "target": "Your full name",
+  "text": "John Doe",
+  "reasoning": "Filling in the full name field with random details.",
+  "task_complete": false
+}
+2026-06-04 14:57:29,646 | INFO | Step 3 decision: type -> Your full name
+2026-06-04 14:57:29,646 | INFO | Step 3 reasoning: Filling in the full name field with random details.
+2026-06-04 14:57:29,654 | INFO | Executing action at step 3: type
+2026-06-04 14:57:34,591 | INFO | Starting step 4 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:57:39,964 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:39,965 | INFO | Model raw response: {
+  "action": "type",
+  "target": "your@email.com",
+  "text": "randomemail@example.com",
+  "reasoning": "Filling in the email field with a random email address.",
+  "task_complete": false
+}
+2026-06-04 14:57:39,965 | INFO | Step 4 decision: type -> your@email.com
+2026-06-04 14:57:39,965 | INFO | Step 4 reasoning: Filling in the email field with a random email address.
+2026-06-04 14:57:39,973 | INFO | Executing action at step 4: type
+2026-06-04 14:57:44,928 | INFO | Starting step 5 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:57:49,418 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:49,418 | INFO | Model raw response: {
+  "action": "type",
+  "target": "Mobile number",
+  "text": "+91 98765 43210",
+  "reasoning": "Filling in the mobile number field with random details.",
+  "task_complete": false
+}
+2026-06-04 14:57:49,419 | INFO | Step 5 decision: type -> Mobile number
+2026-06-04 14:57:49,419 | INFO | Step 5 reasoning: Filling in the mobile number field with random details.
+2026-06-04 14:57:49,425 | INFO | Executing action at step 5: type
+2026-06-04 14:57:54,360 | INFO | Starting step 6 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:57:59,229 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:57:59,230 | INFO | Model raw response: {
+  "action": "type",
+  "target": "Tell us about your learning goals or any questions...",
+  "text": "I am interested in learning more about AI and its applications.",
+  "reasoning": "Filling in the message field with relevant details.",
+  "task_complete": false
+}
+2026-06-04 14:57:59,230 | INFO | Step 6 decision: type -> Tell us about your learning goals or any questions...
+2026-06-04 14:57:59,230 | INFO | Step 6 reasoning: Filling in the message field with relevant details.
+2026-06-04 14:57:59,238 | INFO | Executing action at step 6: type
+2026-06-04 14:58:04,177 | INFO | Starting step 7 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:58:08,992 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:58:08,993 | INFO | Model raw response: {
+  "action": "click",
+  "target": "Submit",
+  "text": "",
+  "reasoning": "Submitting the contact form after filling in the details.",
+  "task_complete": false
+}
+2026-06-04 14:58:08,993 | INFO | Step 7 decision: click -> Submit
+2026-06-04 14:58:08,993 | INFO | Step 7 reasoning: Submitting the contact form after filling in the details.
+2026-06-04 14:58:12,632 | INFO | Executing action at step 7: click
+2026-06-04 14:58:18,519 | INFO | Starting step 8 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:58:23,504 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:58:23,505 | INFO | Model raw response: {
+  "action": "click",
+  "target": "Submit",
+  "text": "",
+  "reasoning": "Submitting the contact form after filling in the details.",
+  "task_complete": false
+}
+2026-06-04 14:58:23,506 | INFO | Step 8 decision: click -> Submit
+2026-06-04 14:58:23,506 | INFO | Step 8 reasoning: Submitting the contact form after filling in the details.
+2026-06-04 14:58:30,090 | INFO | Executing action at step 8: click
+2026-06-04 14:59:09,013 | INFO | Starting step 9 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 14:59:13,894 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 14:59:13,895 | INFO | Model raw response: {
+  "action": "done",
+  "target": "",
+  "text": "",
+  "reasoning": "The contact form has been successfully submitted.",
+  "task_complete": true
+}
+2026-06-04 14:59:13,895 | INFO | Step 9 decision: done -> 
+2026-06-04 14:59:13,895 | INFO | Step 9 reasoning: The contact form has been successfully submitted.
+2026-06-04 14:59:13,896 | INFO | Task complete at step 9
+2026-06-04 14:59:13,966 | INFO | Run finished; final screenshot saved
+2026-06-04 14:59:13,966 | INFO | Closing browser
