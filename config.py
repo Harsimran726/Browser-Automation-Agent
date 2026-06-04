@@ -9,7 +9,7 @@ from pathlib import Path
 
 @dataclass(slots=True)
 class configuration:
-    model: str = field(default_factory=lambda: os.getenv("OPENAI_MODEL", "gpt-4o-mini"))
+    model: str = field(default_factory=lambda: os.getenv("OPENAI_MODEL", "gpt-4o-mini")) # gpt-5-mini-2025-08-07
     popup_model: str = field(default_factory=lambda: os.getenv("OPENAI_POPUP_MODEL", os.getenv("OPENAI_MODEL", "gpt-4o-mini")))
     api_key: str | None = field(default_factory=lambda: os.getenv("OPENAI_API_KEY"))
     start_url: str = field(default_factory=lambda: os.getenv("START_URL", ""))
@@ -22,7 +22,7 @@ class configuration:
     navigation_timeout_ms: int = 120000
     readiness_timeout_ms: int = 80000
     stability_delay_seconds: float = 0.5
-    browser_slow_mo_ms: int = 200
+    browser_slow_mo_ms: int = 100
     headless: bool = False
     user_agent: str = (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

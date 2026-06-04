@@ -1,0 +1,122 @@
+2026-06-04 15:57:58,701 | INFO | Loaded task: go to https://sevenaiinstitute.com/ find the contact us form, fill the contact form reagrding the website , fill the random details and submit it
+2026-06-04 15:57:58,702 | INFO | Resolved start URL: https://sevenaiinstitute.com/
+2026-06-04 15:57:58,702 | INFO | Writing run log to: logs\run_20260604_155629.log
+2026-06-04 15:57:59,530 | INFO | Launching Chromium browser
+2026-06-04 15:58:00,560 | INFO | Navigating to start URL
+2026-06-04 15:58:03,964 | INFO | Starting pre-session popup handling
+2026-06-04 15:58:07,477 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:07,500 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:10,643 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/
+2026-06-04 15:58:12,864 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:12,866 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:21,503 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:21,505 | INFO | Model raw response: {
+  "action": "navigate",
+  "target": "https://sevenaiinstitute.com/",
+  "text": "",
+  "reasoning": "I see the current URL is already the target website. I will navigate to the homepage to find the contact us form. This should allow me to locate the form for further action.",
+  "task_complete": false,
+  "confidence": "high"
+}
+2026-06-04 15:58:21,506 | INFO | Step 1 decision: navigate -> https://sevenaiinstitute.com/
+2026-06-04 15:58:21,506 | INFO | Step 1 reasoning: I see the current URL is already the target website. I will navigate to the homepage to find the contact us form. This should allow me to locate the form for further action.
+2026-06-04 15:58:21,548 | INFO | Executing action at step 1: navigate
+2026-06-04 15:58:25,162 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:25,163 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:28,714 | INFO | Starting step 2 on URL https://sevenaiinstitute.com/
+2026-06-04 15:58:31,088 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:31,090 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:38,572 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:38,574 | INFO | Model raw response: {
+  "action": "scroll",
+  "target": "",
+  "text": "",
+  "reasoning": "I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll down to locate it.",
+  "task_complete": false,
+  "confidence": "high"
+}
+2026-06-04 15:58:38,574 | INFO | Step 2 decision: scroll -> 
+2026-06-04 15:58:38,575 | INFO | Step 2 reasoning: I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll down to locate it.
+2026-06-04 15:58:38,615 | INFO | Executing action at step 2: scroll
+2026-06-04 15:58:41,602 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:41,606 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:45,163 | INFO | Starting step 3 on URL https://sevenaiinstitute.com/
+2026-06-04 15:58:47,714 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:47,718 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:58:55,147 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:55,148 | INFO | Model raw response: {
+  "action":        "scroll",
+  "target":        "Contact Us",
+  "text":          "",
+  "reasoning":     "I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll to locate it.",
+  "task_complete": false,
+  "confidence":    "medium"
+}
+2026-06-04 15:58:55,149 | INFO | Step 3 decision: scroll -> Contact Us
+2026-06-04 15:58:55,149 | INFO | Step 3 reasoning: I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll to locate it.
+2026-06-04 15:58:55,173 | INFO | Executing action at step 3: scroll
+2026-06-04 15:58:57,819 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:58:57,821 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:59:01,324 | INFO | Starting step 4 on URL https://sevenaiinstitute.com/
+2026-06-04 15:59:03,353 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:59:03,355 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:59:10,230 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:59:10,232 | INFO | Model raw response: {
+  "action":        "scroll",
+  "target":        "Contact Us",
+  "text":          "",
+  "reasoning":     "I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll to locate it.",
+  "task_complete": false,
+  "confidence":    "medium"
+}
+2026-06-04 15:59:10,233 | INFO | Step 4 decision: scroll -> Contact Us
+2026-06-04 15:59:10,233 | INFO | Step 4 reasoning: I see the homepage of the website, but I need to find the 'Contact Us' form, which may be further down the page. I will scroll to locate it.
+2026-06-04 15:59:10,257 | INFO | Executing action at step 4: scroll
+2026-06-04 15:59:12,817 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:59:12,819 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:59:16,317 | INFO | Starting step 5 on URL https://sevenaiinstitute.com/
+2026-06-04 15:59:18,410 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 15:59:18,412 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 15:59:23,444 | ERROR | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

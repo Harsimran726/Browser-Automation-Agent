@@ -1,0 +1,7 @@
+2026-06-04 16:22:54,548 | INFO | Loaded task: https://sevenaiinstitute.com/admin/index.php
+2026-06-04 16:22:54,549 | INFO | Resolved start URL: https://sevenaiinstitute.com/admin/index.php
+2026-06-04 16:22:54,549 | INFO | Writing run log to: logs\run_20260604_162246.log
+2026-06-04 16:22:55,321 | INFO | Launching Chromium browser
+2026-06-04 16:22:56,770 | ERROR | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

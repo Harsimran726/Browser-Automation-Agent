@@ -1,0 +1,47 @@
+2026-06-04 16:40:58,065 | INFO | Loaded task: go to https://sevenaiinstitute.com/ find the contact us form, fill the contact form reagrding the website , fill the random details and submit it
+2026-06-04 16:40:58,066 | INFO | Resolved start URL: https://sevenaiinstitute.com/
+2026-06-04 16:40:58,066 | INFO | Writing run log to: logs\run_20260604_164057.log
+2026-06-04 16:40:58,937 | INFO | Launching Chromium browser
+2026-06-04 16:41:00,189 | INFO | Navigating to start URL
+2026-06-04 16:41:04,002 | INFO | Starting pre-session popup handling
+2026-06-04 16:41:07,750 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 16:41:07,771 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 16:41:10,696 | INFO | Starting step 1 on URL https://sevenaiinstitute.com/
+2026-06-04 16:41:12,855 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 16:41:12,861 | INFO | Popup classifier raw response: {
+	"category": "irrelevant",
+	"reason": "The popup offers to talk on WhatsApp about enrolling in AI courses, which is not necessary for filling out the contact form.",
+	"confidence": 0.9
+}
+2026-06-04 16:41:21,536 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 16:41:21,538 | INFO | Model raw response: {
+  "action": "click",
+  "target": "CONTACT US",
+  "text": "",
+  "reasoning": "I see a navigation bar at the top-right with the link labeled 'CONTACT US'. I will click the 'CONTACT US' link. This should navigate to or scroll to the contact form on the site so I can fill and submit it.",
+  "task_complete": false,
+  "confidence": "high"
+}
+2026-06-04 16:41:21,539 | INFO | Step 1 decision: click -> CONTACT US
+2026-06-04 16:41:21,539 | INFO | Step 1 reasoning: I see a navigation bar at the top-right with the link labeled 'CONTACT US'. I will click the 'CONTACT US' link. This should navigate to or scroll to the contact form on the site so I can fill and submit it.
+2026-06-04 16:41:21,587 | INFO | Executing action at step 1: click
+2026-06-04 16:41:27,783 | INFO | Starting step 2 on URL https://sevenaiinstitute.com/contact.php
+2026-06-04 16:41:34,035 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-04 16:41:34,037 | INFO | Model raw response: {
+  "action": "click",
+  "target": "GET IN TOUCH",
+  "text": "",
+  "reasoning": "I see a prominent 'GET IN TOUCH' button centered below the header text on the Contact page. I will click the 'GET IN TOUCH' button. This should navigate/scroll to the contact form on the page so I can fill it with the requested details and submit it.",
+  "task_complete": false,
+  "confidence": "high"
+}
+2026-06-04 16:41:34,037 | INFO | Step 2 decision: click -> GET IN TOUCH
+2026-06-04 16:41:34,037 | INFO | Step 2 reasoning: I see a prominent 'GET IN TOUCH' button centered below the header text on the Contact page. I will click the 'GET IN TOUCH' button. This should navigate/scroll to the contact form on the page so I can fill it with the requested details and submit it.
+2026-06-04 16:41:34,060 | INFO | Executing action at step 2: click
+2026-06-04 16:41:43,548 | ERROR | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

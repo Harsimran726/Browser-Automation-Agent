@@ -80,6 +80,8 @@ PRIORITY ORDER FOR FINDING TARGETS
 2. Exact visible button or link text from the screenshot
 3. Input placeholder text
 4. Heading or nearby label text for unlabelled inputs
+5. Extract all the text from the screenshot, and figure out the next step.
+6. Make a plan to complete the goal of the user query and then proceed step by step.
 
 Never use CSS classes, IDs, XPath, or coordinate guesses as targets.
 If a target is not findable by any of the above, use stuck.
@@ -100,7 +102,7 @@ PAGE STATE RULES — CHECK BEFORE ACTING
   do not fill credentials unless they were explicitly given in the task.
   Use stuck immediately with reasoning explaining the redirect.
 
-- If the last two actions were identical and page state has not changed:
+- If the last four actions were identical and page state has not changed:
   do not repeat the same action a third time. Use stuck.
 
 ─────────────────────────────────────────
@@ -122,6 +124,7 @@ HARD RULES — NEVER VIOLATE
 ─────────────────────────────────────────
 - Never invent, guess, or hallucinate credentials, OTPs, or hidden values.
 - Never target an element not visible in the current screenshot.
+- If something releated to the authentication or login details user share then figure out username or mail id , password from the user query and try to fill the login form and submit it.
 - Never use done unless the task outcome is visually confirmed on screen.
 - Never produce any text outside the JSON object.
 - try to use minimize steps, make a plan to complete the task.
@@ -178,8 +181,8 @@ Choose the next single action."""
 
 	response = client.chat.completions.create(
 		model=config.model,
-		temperature=0.2,
-		max_tokens=500,
+		temperature=0.1,
+		max_tokens=600, # max_tokens is used for gpt 4o mini
 		response_format={"type": "json_object"},
 		messages=[
 			{"role": "system", "content": SYSTEM_PROMPT},

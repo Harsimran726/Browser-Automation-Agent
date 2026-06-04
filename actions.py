@@ -125,6 +125,18 @@ def _fill_nearest_input(page: Page, description: str, text: str) -> bool:
 					return text && (text === target || text.includes(target) || target.includes(text));
 				});
 
+				const setNativeValue = (element, value) => {
+					const prototype = Object.getPrototypeOf(element);
+					const descriptor = Object.getOwnPropertyDescriptor(prototype, 'value') || Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value') || Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value');
+					if (descriptor && descriptor.set) {
+						descriptor.set.call(element, value);
+					} else {
+						element.value = value;
+					}
+					element.dispatchEvent(new Event('input', { bubbles: true }));
+					element.dispatchEvent(new Event('change', { bubbles: true }));
+				};
+
 				const fillElement = (element) => {
 					if (!element) return false;
 					if (element.matches('input, textarea, select, [contenteditable="true"]')) {
@@ -133,9 +145,7 @@ def _fill_nearest_input(page: Page, description: str, text: str) -> bool:
 						if (element.matches('[contenteditable="true"]')) {
 							element.textContent = value;
 						} else {
-							element.value = value;
-							element.dispatchEvent(new Event('input', { bubbles: true }));
-							element.dispatchEvent(new Event('change', { bubbles: true }));
+							setNativeValue(element, value);
 						}
 						return true;
 					}
@@ -147,9 +157,7 @@ def _fill_nearest_input(page: Page, description: str, text: str) -> bool:
 						if (scopedInput.matches('[contenteditable="true"]')) {
 							scopedInput.textContent = value;
 						} else {
-							scopedInput.value = value;
-							scopedInput.dispatchEvent(new Event('input', { bubbles: true }));
-							scopedInput.dispatchEvent(new Event('change', { bubbles: true }));
+							setNativeValue(scopedInput, value);
 						}
 						return true;
 					}
@@ -233,7 +241,6 @@ def type_into_field(page: Page, field_description: str, text: str, timeout_ms: i
 		page.locator(f'textarea[name="{field_description}"]'),
 		page.locator(f'textarea[id="{field_description}"]'),
 		page.locator(f'textarea[aria-label="{field_description}"]'),
-		page.locator("input:not([type='hidden']), textarea, [contenteditable='true']"),
 	]
 
 	for locator in attempts:
@@ -247,6 +254,18 @@ def type_into_field(page: Page, field_description: str, text: str, timeout_ms: i
 
 	if _fill_nearest_input(page, field_description, text):
 		return True
+
+	try:
+		generic_inputs = page.locator("input:not([type='hidden']), textarea, [contenteditable='true']")
+		for index in range(generic_inputs.count()):
+			field = generic_inputs.nth(index)
+			if field.is_visible(timeout=500):
+				field.scroll_into_view_if_needed(timeout=timeout_ms)
+				field.click(timeout=timeout_ms)
+				field.fill(text, timeout=timeout_ms)
+				return True
+	except Exception:
+		pass
 
 	return False
 
